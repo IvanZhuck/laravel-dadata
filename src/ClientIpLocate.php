@@ -182,7 +182,7 @@ class ClientIpLocate
             throw new RuntimeException('Empty request');
         }
 
-        $request = new Request($method, $url.'?q='.$params['ip'], [
+        $request = new Request($method, $url.'?ip='.$params['ip'], [
             'Content-Type' => 'application/json',
             'Accept' => 'application/json',
             'Authorization' => 'Token ' . $this->token
