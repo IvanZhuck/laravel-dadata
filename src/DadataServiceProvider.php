@@ -34,6 +34,9 @@ class DadataServiceProvider extends ServiceProvider
         $this->app->bind('dadata_clean', function () {
             return new ClientClean();
         });
+        $this->app->bind('dadata_iplocate', function () {
+            return new ClientIpLocate();
+        });
 
         $this->mergeConfigFrom(__DIR__.'/../config/dadata.php', 'dadata');
     }
