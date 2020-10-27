@@ -209,7 +209,7 @@ class ClientSuggest
                     throw new RuntimeException('Empty result');
                 }
 
-                return count($result['suggestions']) === 1 ? $result['suggestions'][0] : $result['suggestions'];
+                return $result['suggestions'];
 
                 break;
             case 400:
